@@ -1,3 +1,4 @@
+//Arrays de perguntas e respostas
 const perguntasERespostas = [
     {
         pergunta: "Qual estrutura de repetição utilizamos quando sabemos a quantidade exata das repetições no código?",
@@ -13,7 +14,7 @@ const perguntasERespostas = [
 
     {
         pergunta: "Qual operador lógico é usado para representar 'OU' (OR)?",
-        alternativas: ["A) &&", "B) ||", "C) != "],
+        alternativas: ["A) &&", "B) ||", "C) !="],
         respostaCorreta: "B"
     },
 
@@ -23,4 +24,27 @@ const perguntasERespostas = [
        respostaCorreta: "A" 
     }
 ];
+function iniciarQuiz() {
+  // Pega uma pergunta aleatória do array
+  const perguntaAleatoria = perguntasERespostas[Math.floor(Math.random() * perguntasERespostas.length)];
+
+  // Constrói a mensagem para o usuário
+  let mensagem = perguntaAleatoria.pergunta + '\n\n';
+  perguntaAleatoria.alternativas.forEach(alt => {
+    mensagem += alt + '\n';
+  });
+
+  // Pede a resposta do usuário
+  const respostaUsuario = prompt(mensagem);
+
+  // Verifica a resposta e exibe o resultado
+  if (respostaUsuario && respostaUsuario.toUpperCase() === perguntaAleatoria.respostaCorreta) {
+    alert('Parabéns! Você acertou!');
+  } else {
+    alert('Que pena! Resposta incorreta. A resposta certa é: ' + perguntaAleatoria.respostaCorreta);
+  }
+}
+
+// chamada da Função para rodar o quiz.
+iniciarQuiz();
 
