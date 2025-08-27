@@ -34,9 +34,7 @@ for (let i = 0; i < perguntasERespostas.length; i++) {
 
     do {
         resposta = prompt(
-            `Pergunta ${i + 1}: ${questao.pergunta}\n` +
-            questao.alternativas.join("\n") + "\n" +
-            "Digite A, B ou C:"
+             `Pergunta ${i + 1}: ${questao.pergunta}\n${questao.alternativas.join("\n")}\nDigite A, B ou C:`
         ).toUpperCase();
     } while (resposta !== "A" && resposta !== "B" && resposta !== "C");
 
@@ -44,6 +42,10 @@ for (let i = 0; i < perguntasERespostas.length; i++) {
 
     if (resposta === questao.respostaCorreta) {
         pontuacao++;
+        alert("Parabéns, você acertou!");
+    } else {
+       
+        alert(`Você errou! A resposta correta é: ${questao.respostaCorreta}`);
     }
 }
 
