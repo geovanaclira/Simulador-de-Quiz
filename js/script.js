@@ -53,7 +53,7 @@ alert(`Fim de Quiz! \nVocê acertou ${pontuacao} de ${perguntasERespostas.length
 
 console.log("---- GABARITO ----");
 for (let i = 0; i < perguntasERespostas.length; i++) {
-    console.log(
+    alert(
         "Pergunta " + (i + 1) + ": " + perguntasERespostas[i].pergunta +
         " | Correta: " + perguntasERespostas[i].respostaCorreta +
         " | Sua resposta: " + respostasAluno[i]
