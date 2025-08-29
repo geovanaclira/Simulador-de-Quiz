@@ -53,11 +53,19 @@ alert(`Fim de Quiz! \nVocê acertou ${pontuacao} de ${perguntasERespostas.length
 
 console.log("---- GABARITO ----");
 for (let i = 0; i < perguntasERespostas.length; i++) {
-    alert(
+    console.log(
         "Pergunta " + (i + 1) + ": " + perguntasERespostas[i].pergunta +
         " | Correta: " + perguntasERespostas[i].respostaCorreta +
         " | Sua resposta: " + respostasAluno[i]
     );
 }
-
+if (pontuacao === totalPerguntas) {
+    alert("Excelente! Você tem um conhecimento sólido em programação");
+}
+else if (pontuacao >= totalPerguntas /2){
+    alert( "Muito bom! Você está no caminho certo.");
+}
+else {
+    alert("Continue estudando! A prática leva à perfeição.");
+}
 
