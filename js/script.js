@@ -59,10 +59,10 @@ for (let i = 0; i < perguntasERespostas.length; i++) {
         " | Sua resposta: " + respostasAluno[i]
     );
 }
-if (pontuacao === totalPerguntas) {
+if (pontuacao === perguntasERespostas.lenght) {
     alert("Excelente! Você tem um conhecimento sólido em programação");
 }
-else if (pontuacao >= totalPerguntas /2){
+else if (pontuacao >= perguntasERespostas.lenght /2){
     alert( "Muito bom! Você está no caminho certo.");
 }
 else {
