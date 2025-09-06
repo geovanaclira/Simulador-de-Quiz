@@ -9,3 +9,5 @@
 1. Bruna dos Santos
 2. Geovana Cristina
 3. João Paulo Nogueira
+4. Mariane Caldeira
+5. Mikaela 
